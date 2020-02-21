@@ -9,7 +9,16 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="session_content">
-    <%= yield %>
+  <body id="main_content">
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <%= render 'layouts/sidebar' %>
+
+      <!-- Page Content -->
+      <div id="content">
+        <%= render 'layouts/page_header' %>
+        <%= yield %>
+      </div>
+    </div>  
   </body>
 </html>

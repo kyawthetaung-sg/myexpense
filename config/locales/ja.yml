@@ -1,0 +1,40 @@
+ja:
+  action_button:
+    new: "新着"
+    save: "セーブ"
+    cancel: "キャンセル"
+    edit: "編集"
+    update: "更新する"
+    delete: "削除する"
+    back: "バック"
+    detail: "詳細"
+
+  menu_header:
+    setting: "設定"
+    message: "メッセージ"
+    notification: "通知"
+    sign_out: "サインアウト"
+
+  menu_title:
+    home:
+      title: "ホームページ"
+    setting:
+      title: "セッティング"
+      edit_language: "ユーザー言語の変更"
+      edit_theme: "ユーザーテーマを変更する"
+    theme:
+      new: "新しいテーマ"
+      edit: "テーマを編集"
+
+  menu_sidebar:
+    home: "ホーム"
+    setting: "サイト設定"
+    theme: "テーマ"
+
+  setting:
+    index:
+      language: "使用言語"
+      theme: "使用したテーマ"
+  theme:
+    index:
+      default_theme: "デフォルトのテーマ"

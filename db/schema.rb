@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_18_161119) do
+ActiveRecord::Schema.define(version: 2020_02_19_142145) do
+
+  create_table "themes", force: :cascade do |t|
+    t.string "name"
+    t.string "color"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.integer "deleted_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,8 +31,15 @@ ActiveRecord::Schema.define(version: 2020_02_18_161119) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_name", default: ""
+    t.string "first_name", default: ""
+    t.string "last_name", default: ""
+    t.integer "language", default: 1
+    t.integer "theme_id", default: 1, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["theme_id"], name: "index_users_on_theme_id"
   end
 
+  add_foreign_key "users", "themes"
 end

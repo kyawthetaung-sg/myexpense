@@ -30,4 +30,42 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  action_button:
+    new: "New"
+    save: "Save"
+    cancel: "Cancel"
+    edit: "Edit"
+    update: "Update"
+    delete: "Delete"
+    back: "Back"
+    detail: "Detail"
+
+  menu_header:
+    setting: "Setting"
+    message: "Message"
+    notification: "Notification"
+    sign_out: "SignOut"
+    
+  menu_title:
+    home:
+      title: "Home"
+    setting:
+      title: "Setting"
+      edit_language: "User Language Change"
+      edit_theme: "User Theme Change"
+    theme:
+      new: "New Theme"
+      edit: "Edit Theme"
+
+  menu_sidebar:
+    home: "Home"
+    setting: "Site Setting"
+    theme: "Theme"
+
+  setting:
+    index:
+      language: "Language"
+      theme: "theme"
+  theme:
+    index:
+      default_theme: "Default Theme"

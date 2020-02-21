@@ -1,0 +1,43 @@
+<nav id="sidebar" style="background-color: <%= current_user.theme.color %>;">
+    <div id="menu_border" style="background-color: <%= current_user.theme.color %>;">
+        <button type="button" id="sidebarCollapse">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+    </div>
+    <div class="sidebar-header" style="border: 10px solid <%= current_user.theme.color %>;">
+        <%= image_tag("kta.png", :alt => "logo", style: 'height:100px;width:auto;') %>
+    </div>
+
+    <ul class="list-unstyled components show_menu" id="show_menu" style="background-color: <%= current_user.theme.color %>;">
+        <p class="text-center"><i id="page_label">Dummy Heading</i></p>
+        <li class="<%= request.path == root_path ? 'active' : '' %>">
+            <%= link_to root_path do %>
+                <i class="fas fa-home"></i><%= t("menu_sidebar.home") %>
+            <% end %>
+        </li>
+
+        <%= setting_links %>
+
+    </ul>
+</nav>
+
+<script>
+    $(function() {
+        $("#sidebar .dropright").click(function() {
+            $(this).toggleClass("open");
+            $(this).toggleClass("dropdown");
+            $(this).toggleClass("dropright");
+        });
+
+        $("#sidebar .dropdown").click(function() {
+            $(this).toggleClass("open");
+            $(this).toggleClass("dropdown");
+            $(this).toggleClass("dropright");
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#show_menu').toggleClass('show_menu');
+        });
+
+    });
+</script>

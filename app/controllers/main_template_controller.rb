@@ -1,4 +1,6 @@
 class MainTemplateController < ApplicationController
+    include Pagy::Backend
+    
     prepend_before_action :set_locale
 
     private

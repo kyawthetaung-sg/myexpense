@@ -1,0 +1,27 @@
+<%= render 'layouts/page_title' %>
+
+<div id="body_content">
+    <div class="row">
+        <div class="col-sm-3">
+            <h4><%= t("setting.index.language") %></h4>
+        </div>
+        <div class="col-sm-3">
+            <p><%= full_language(current_user.language) %></p>
+        </div>
+        <div class="col-sm-3">
+            <%= link_to t("action_button.edit"), edit_language_path, class: "btn btn-outline-secondary" %>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <h4><%= t("setting.index.theme") %></h4>
+        </div>
+        <div class="col-sm-3">
+            <div id="user_theme"><div id="user_sidebar_theme" style="background: <%= current_user.theme.color %>;"></div></div>
+        </div>
+        <div class="col-sm-3">
+            <%= link_to t("action_button.edit"), themes_path, class: "btn btn-outline-secondary" %>
+        </div>
+    </div>
+</div>

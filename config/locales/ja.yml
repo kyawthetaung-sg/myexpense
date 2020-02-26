@@ -25,11 +25,26 @@ ja:
     theme:
       new: "新しいテーマ"
       edit: "テーマを編集"
+    income:
+      title: "Income"
+      edit: "Editing Income"
+      new: "Create Income"
+      detail: "Detail Income"
+    category:
+      title: "Categories"
+      edit: "Editing Category"
+      new: "Create Category"
+      detail: "Detail Category"
+
 
   menu_sidebar:
     home: "ホーム"
     setting: "サイト設定"
     theme: "テーマ"
+    expense: "Expense"
+    income: "Income"
+    outcome: "Outcome"
+    category: "Category"
 
   setting:
     index:

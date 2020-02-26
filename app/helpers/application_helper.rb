@@ -7,6 +7,14 @@ module ApplicationHelper
         end
     end
 
+    def expense_links
+      options = [
+          {path: incomes_path, label: t("menu_sidebar.income")},
+          {path: categories_path, label: t("menu_sidebar.category")},
+      ]
+      navigation_dropdown_link(t("menu_sidebar.expense"), "fas fa-book", options)
+    end
+
     def setting_links
         options = [
             {path: themes_path, label: t("menu_sidebar.theme")},

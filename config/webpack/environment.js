@@ -3,7 +3,7 @@ const webpack = require("webpack");
 environment.plugins.append(
     "Provide",
     new webpack.ProvidePlugin({
-    $: 'jquery/src/jquery',
+    $: 'jquery',
     jQuery: 'jquery/src/jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery',

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :categories
+  resources :incomes
   resources :themes
   get 'settings/index', as: 'settings'
   get 'settings/edit_language', as: 'edit_language'

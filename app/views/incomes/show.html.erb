@@ -1,0 +1,26 @@
+<%= render 'layouts/page_title' %>
+
+<div id="body_content">
+  <% if notice %>
+    <p id="notice" class="alert alert-success"><%= notice %></p>
+  <% end %>
+
+  <table class="table table-borderless">
+    <tr>
+      <th class="text-right" width="10%">Date:</th>
+      <td><%= @income.date %></td>
+    </tr>
+
+    <tr>
+      <th class="text-right">Description:</th>
+      <td><%= @income.description %></td>
+    </tr>
+
+    <tr>
+      <th class="text-right">Price:</th>
+      <td><%= @income.price %></td>
+    </tr>
+  </table>
+  <%= link_to '<i class="fas fa-reply-all"></i> '.html_safe + t("action_button.back"), incomes_path, class: "btn btn-outline-secondary btn-float"  %>
+  <%= link_to '<i class="far fa-edit"></i> '.html_safe + t("action_button.edit"), edit_income_path(@income), class: "btn btn-outline-info btn-float" %>
+</div>

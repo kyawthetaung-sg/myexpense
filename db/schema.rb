@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_19_142145) do
+ActiveRecord::Schema.define(version: 2020_02_21_143039) do
+
+  create_table "categories", force: :cascade do |t|
+    t.integer "type"
+    t.string "name"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.integer "deleted_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "incomes", force: :cascade do |t|
+    t.datetime "date"
+    t.string "description"
+    t.integer "price"
+    t.integer "category_id"
+    t.integer "created_by"
+    t.integer "updated_by"
+    t.integer "deleted_by"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_incomes_on_category_id"
+  end
 
   create_table "themes", force: :cascade do |t|
     t.string "name"

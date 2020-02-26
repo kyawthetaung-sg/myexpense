@@ -56,11 +56,25 @@ en:
     theme:
       new: "New Theme"
       edit: "Edit Theme"
+    income:
+      title: "Income"
+      edit: "Editing Income"
+      new: "Create Income"
+      detail: "Detail Income"
+    category:
+      title: "Categories"
+      edit: "Editing Category"
+      new: "Create Category"
+      detail: "Detail Category"
 
   menu_sidebar:
     home: "Home"
     setting: "Site Setting"
     theme: "Theme"
+    expense: "Expense"
+    income: "Income"
+    outcome: "Outcome"
+    category: "Category"
 
   setting:
     index:

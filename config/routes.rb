@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :themes
+    end
+  end
 
   resources :themes
   get 'settings/index', as: 'settings'
